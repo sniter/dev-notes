@@ -1,5 +1,7 @@
 # Django
 
+## [Perfomance Bottlenecks](./perfomance.md)
+
 ## Cache
 
 # Testing 
