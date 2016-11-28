@@ -39,6 +39,10 @@ Functor
 * Actors / FSM
 * CQS/CQRS
 
+## Technologies
+
+* MQ
+
 ## Languages
 
 * Erlang

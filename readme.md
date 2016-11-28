@@ -11,6 +11,7 @@
 * [UML2](./arch/uml/readme.md)
 * [Microservices](./arch/microservices/readme.md)
 * [CQS/CQRS](./arch/cqrs/readme.md)
+* [Design Patterns](./arch/design-patterns/readme.md)
 
 ## Paradigms
 
@@ -20,6 +21,7 @@
 ## Methodology
 
 * [Reactive Programming](./methodology/reactive/readme.md)
+* [12 Factors](.methodology/12-factors/readme.md)
 * [Domain Driven Desing](./methodology/domain-dd/readme.md)
 * [Behavior Driven Desing](./methodology/bdd/readme.md)
 * [Test Driven Desing](./methodology/bdd/readme.md)

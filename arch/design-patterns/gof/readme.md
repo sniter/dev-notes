@@ -1,0 +1,55 @@
+## GoF Patterns
+
+- Creational
+    - Abstract factory
+    - Builder
+    - Factory method
+    - Lazy initialization
+    - Multiton
+    - Object pool
+    - Prototype
+    - Resource acquisition is initialization
+    - Singleton
+- Structural
+    - Adapter / Wrapper / Translator
+    - Bridge
+    - Composite
+    - Decorator
+    - Facade
+    - Flyweight
+    - Front Controller
+    - Module
+    - Proxy
+    - Twin
+- Behavioral
+    - Blackboard
+    - Chain of responsibility
+    - Command
+    - Interpreter
+    - Iterator
+    - Mediator
+    - Memento
+    - Null object
+    - Observer (Pub/Sub)
+    - Servant
+    - Specification
+    - State
+    - Strategy
+    - Template method
+    - Visitor
+- Concurrency
+    - Active object
+    - Balking
+    - Binding properties
+    - Double checked locking
+    - Event-based asynch
+    - Guarded suspension
+    - Join
+    - Lock
+    - Message driven pattern MDP
+    - Monitor object
+    - Reactor
+    - Read-write lock
+    - Scheduler
+    - Thread pool
+    - Thread specific storage
