@@ -1,0 +1,232 @@
+Main Concept
+
+<pre>
+
+- Traversable
+    - Adding elements (++)
+    - Map functions (map,flatMap,collect)
+    - Conversions (toArray,toList,...)
+    - Copy operations (copyToBuffer,copyToArray)
+    - Size info (isEmpty, nonEmpty, size, hasDefiniteSize)
+    - Element retrieval (head,last,headOption,lastOption,...)
+    - Subcollection (tail,init,slice,take, drop ...)
+    - Subdivision (splitAt, span, partition, groupBy)
+    - Element tests (exists, forall, count)
+    - Folds
+    - Specific folds (sum,product, min, max)
+    - String operations (mkString, addString, stringPrefix)
+    - View
+- Iterable (in terms of an abstract method - iterator, which yields the collection elements one by one)
+    - iterators (iterator,grouped,sliding)
+    - Subcollection (takeRight,dropRight)
+    - Zippers (zip,zipAll)
+    - Comparison (sameElements)
+    - has state
+- Sequence (Seq)
+    - Kind of Iterable that has a length and whose elementes have fixed index positions, starting from 0
+    - Linear Sequence - has efficient head and tail operations
+        - immutable.List
+        - immutable.Stream
+    - Indexed Sequence - has efficient apply and length operations
+        - Array
+        - mutable.ArrayBuffer
+    - Vector - compromise between Linear Seq and Indexed Set
+    - Buffers - mutable sequences, allow update, insert new one, remove. ArrayBuffer can be easily converted to Array
+- Set
+    - Kind of Iterable that has no dublicate elements
+    - Mutable uses hashtable to store elements
+    - Immutable sets use hash tries, more compact and efficient
+    - SortedSet - produces its element in given ordering. TreeSet uses red-black tree implementation to maintain ordering and keep balanced
+    - BitSet are sets of non-negative integer elements that are implemented in one or more words of packed bits. More compact then another sets, operations like membership tests are extremely efficient
+- Map
+    - Iteralble  consisitng of pairs Key - Value
+    - Lookup operations (apply,get,getOrElse,contains,isDefinedAt)
+    - Additions and Updates
+    - Removals
+    - Subcollection producers (keys, keySet, keysIterator,...)
+    - Transformations (filterKeys,mapValues)
+    - SyncronizedMap - trait that can be mixed in in whatever particular map implementation you desire in order to receive thread-safe mutable Map
+- Hash Tables
+    - stores its elements in an underlying array, placing each item at position in array determined by hash code of that item
+    - Adding element with constant time
+    - Efficient while hash codes have good distribution
+- Hash Tries
+    - have nice balance between fast lookups and effitional insertions and deletions
+    - In Scala default implementations of immutable maps and sets
+    - In scala Sets and Maps with 1 to 4 elements are stored as single objects that just contain the elements as fields
+    - Empty immutable Set/Map is a single object - no need to dublicate storage
+- Red black Trees
+    - Form of balanced tree where some nodes designated "red" and athers - "black"
+    - TreeSet, TreeMap provided by it
+- Array
+    - can be generic, Array[T] is absent in java, that is why it is represented as byte[]. or, short[], etc...
+    - generic arrays in 3-4 times slower
+    - compatible with sequences via implicit conversion
+- View
+    - have perfomance issues at small data
+    - evaluation can be very confusind if the delayed operation have side effect
+
+Immutable
+
+- Traversable
+    - Iterable
+        - Set
+            - SortedSet
+                - TreeSet - Red-Black Tree
+            - HashSet
+            - BitSet
+                - uses array of 64-bit Long to store non-negative integers
+                - testing inclusion takes constant time
+                - Adding an item takes time proportional to number of Longs
+            - ListSet
+        - Map
+            - SortedMap
+                - TreeMap - Red-Black Tree
+            - HashMap
+            - ListMap
+                - represents map as linked list of key-value pairs
+                - rare used
+                - operations on list map have to iterate entire list, take linear time
+                - may be used if first elements used more often
+        - Seq
+            - IndexedSeq
+                - Vector
+                    - very  when the algorythm processing the is careful to only process their heads - in constant time
+                    - Effecient for random access in constant time, but slower than for head.
+                    - Tree with high branching factor
+                - NumericRange
+                - Range
+                    - represented in constant space, because can be defined by 3 numbers: start,end,step. most operations extrmely fast
+                - Array
+                - String
+            - LinearSeq
+                - List - constant-time for head,tail,add element to the front of list
+                - Stream - elements computed lazily, can be infinite
+                - Queue - FIFO
+                - Stack - LIFO
+
+Mutable
+
+- Traversable
+    - Iterable
+        - Set
+            - ObservableSet
+            - SynchronizedSet
+            - HashSet - Hash Table
+            - BitSet
+                - is like immutable except it modified in place
+                - more efficient at updating than immutable ones
+            - ImmutableSetAdaptor
+                - deprecated in 2.11 as unreliable and have perfomanceissues
+            - LinkedHashSet
+        - Map
+            - ObservableMap
+                - deprecated since 2.11
+            - SyncronizedMap
+            - MultiMap
+            - HashMap - Hash Table
+            - WeakHashMap
+                - GC does not follow links they stored in
+                - Good for caching
+                - As soon as object becomes unreachable - it is removed from Map
+            - OpenHashMap - mutable hash map with open hash scheme. The presise scheme is undefined
+            - LinkedHashMap
+                    - mutable map using hashtable
+                    - the iterator and all traversal methods visit elements in order they were inserted
+            - ListMap
+                - simple mutable map backed by a list
+            - ImmutableMapAdaptor
+                - deprecated in 2.11 as unreliable and have perfomanceissues
+        - Seq
+            - IndexedSeq
+                - ArraySeq
+                    - mutable sequence of fixed size
+                    - array perfomance
+                    - create generic instances of sequence you dont know the type and have no ClassManifest
+                - StringBuilder
+                    - Like ArrayBuffer, used for build strings
+                - ArrayBuffer
+                    - more operations have same speed as for an array
+                    - can have data efficiently added to the end
+                    - appending item to array takes amortizes constant time
+            - Buffer
+                - ObservableBuffer
+                - SyncronizedBuffer
+                - ArrayBuffer
+                    - more operations have same speed as for an array
+                    - can have data efficiently added to the end
+                    - appending item to array takes amortizes constant time
+                - ListBuffer
+                    - like Array Buffer
+                    - uses Linked List
+            - LinearSeq
+                - MutableList
+                    - like LinkedList, but has pointer to terminal element
+                    - append element in constant time
+                    - Queue
+                        - SynchronizedQueue
+                - LinkedList
+                    - Mutable sequences that consist of nodes which are llinked with next pointers
+                    - Best traversed sequentially
+                    - easy to insert element or another linked list
+                - DoubleLinkedList
+                    - Like linked listt, has prev pointer
+                    - Element removal is very fast
+            - Stack - like immutable stack
+            - ArrayStack
+                - alternative implementation of mutable stack which is backed by Array, that get resized as needed
+                - fast indexing, more efficient for most operations than normal mutable stack
+                - SynchronizedStack
+            - PriorityQueue - like immutable Queue
+                - SyncronizedPriorityQueue
+
+- Order is unimportant?
+    - Value by key?
+        - immutable.HashMap
+        - mutable.HashMap
+    - Value by key?
+        - immutable.HashSet
+        - mutable.HashSet
+- Order is important?
+    - LIFO
+        - mutable.Stack
+        - immutable.Stack
+        - immutable.List
+    - FIFO
+        - mutable.Queue
+        - immutable.Queue
+    - Priority
+        - mutable.PriorityQueue
+        - immutable.PriorityQueue
+    - Sorted?
+        - Allow dublicates?
+            - Value by key?
+                - mutable.MultiMap
+                - immutable.Map[K,List[V]]
+            - Value by index?
+                - mutable.Bag
+                - immutable.Bag
+        - Don't allow dublicates?
+            - Value by key?
+                - mutable.TreeSet
+                - immutable.TreeSet
+            - Value by index?
+                - immutable.TreeMap
+    - Not Sorted?
+        - Value by key?
+            - mutable.LinkedHashMap
+            - immutable.Treemap
+            - immutable.HashMap
+        - Value by index?
+            - No Random access?
+                - mutable.UnrolledBuffer
+                - immutable.List
+            - No Need prepend/append?
+                - mutable.ArrayBuffer
+                - immutable.Vector
+            - No Need concatenate?
+                - immutable.Vector
+            - scala.reactive.core.ConcBuffer
+            - scala.reactive.core.ConqueueBuffer
+
+</pre>
