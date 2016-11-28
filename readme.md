@@ -21,7 +21,7 @@
 ## Methodology
 
 * [Reactive Programming](./methodology/reactive/readme.md)
-* [12 Factors](.methodology/12-factors/readme.md)
+* [12 Factors](./methodology/12-factors/readme.md)
 * [Domain Driven Desing](./methodology/domain-dd/readme.md)
 * [Behavior Driven Desing](./methodology/bdd/readme.md)
 * [Test Driven Desing](./methodology/tdd/readme.md)
@@ -33,3 +33,4 @@
 * [Docker](./tech/docker/readme.md)
 * [Ansible](./tech/ansible/readme.md)
 
+`
