@@ -11,4 +11,4 @@
 
 ## Cache Utils
 
-* boltons (cache, LRU, LRI)
+* boltons (cache, LRU, LRI) 
