@@ -45,4 +45,5 @@ Functor
 * Haskell
 * Scala
 * Python
+* Javascript
 
