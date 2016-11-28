@@ -24,7 +24,7 @@
 * [12 Factors](.methodology/12-factors/readme.md)
 * [Domain Driven Desing](./methodology/domain-dd/readme.md)
 * [Behavior Driven Desing](./methodology/bdd/readme.md)
-* [Test Driven Desing](./methodology/bdd/readme.md)
+* [Test Driven Desing](./methodology/tdd/readme.md)
 * [Data Driven Desing](./methodology/data-dd/readme.md)
 
 ## Technologies
