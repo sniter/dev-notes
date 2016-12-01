@@ -5,6 +5,7 @@ Sources:
 * [12 Factor for Python](https://speakerdeck.com/craigkerstiens/12-factor-for-python)
 * [How to Build 12 Factor Microservices on Docker - Part 1](https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-1)
 * [How to Build 12 Factor Microservices on Docker - Part 2](https://www.packtpub.com/books/content/how-to-build-12-factor-design-microservices-on-docker-part-2)
+* [Twelve-Factor Config: Misunderstandings and Advice](http://blog.doismellburning.co.uk/twelve-factor-config-misunderstandings-and-advice/)
 
 
 ## Codebase
