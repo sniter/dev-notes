@@ -3,9 +3,12 @@
 * [Libraries](./libs.md)
 * [Django](./django/readme.md)
 
-## Architecture
+## Architecture Solutions in Python
 
-### [Event Sourcing](./event-sourcing/readme.md)
+### [Event Sourcing](./arch/event-sourcing/readme.md)
+
+### [12 Factors](./arch/12-factors/readme.md)
+
 
 
 # 2 to 3
