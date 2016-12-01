@@ -2,7 +2,7 @@
 
 ## Example Project
 
-*[johnbywater/eventsourcing](https://github.com/johnbywater/eventsourcing/tree/master)
+* [johnbywater/eventsourcing](https://github.com/johnbywater/eventsourcing/tree/master)
 
 ## Concept
 
