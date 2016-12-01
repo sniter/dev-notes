@@ -120,6 +120,10 @@ Horisontal scaling can be used together with `docker-compose` or/and `docker-swa
 
 ##  Disposability
 
+Some useful software:
+
+* [List of WSGI Servers](http://awesome-python.com/#wsgi-servers)
+
 ## Dev/prod parity
 
 All the platform should have identical services. 
