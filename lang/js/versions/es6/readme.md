@@ -42,5 +42,21 @@ Object.defineProperty(typeof global === "object" ? global : window, "PI", {
     enumerable:   true,
     writable:     false,
     configurable: false
-})
+});
+```
+
+### Define lambda
+
+ES6:
+``` js
+let my_list = [1,2,3];
+
+_.map(my_list, v => v+1);
+```
+
+ES5
+``` js
+var my_list = [1,2,3];
+
+_.map(my_list, function (v){ return v+1;});
 ```
