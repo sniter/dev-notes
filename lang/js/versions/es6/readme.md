@@ -51,12 +51,18 @@ ES6:
 ``` js
 let my_list = [1,2,3];
 
-_.map(my_list, v => v+1);
+_.map(my_list, v => v + 1);
+
+// In case many paramaters
+_.map(my_list, (v, x) => v + x);
 ```
 
 ES5
 ``` js
 var my_list = [1,2,3];
 
-_.map(my_list, function (v){ return v+1;});
+_.map(my_list, function (v){ return v + 1;});
+
+// In case many paramaters
+_.map(my_list, function (v, x){ return v + x;});
 ```
