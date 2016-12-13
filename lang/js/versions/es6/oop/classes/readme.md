@@ -76,9 +76,9 @@ class MyClass {
 }
 ```
 
-## Getter/Setter
+### Getter/Setter
 
-### Get
+#### Get
 
 The `get` syntax binds an object property to a function that will be called when that property is looked up.
 
@@ -98,7 +98,7 @@ let myFoo = myInstance.foo;
 myFoo; // 2
 ```
 
-### Set
+#### Set
 
 The `set` syntax binds an object property to a function to be called when there is an attempt to set that property.
 
