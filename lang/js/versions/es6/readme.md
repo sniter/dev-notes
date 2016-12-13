@@ -69,15 +69,43 @@ my_list.map(function (v){ return v + 1});
 // In case many paramaters
 my_list.map(function (v, x){ return v + x});
 
-// handling context *this* -- case 1
+// CASE: handling context *this* -- case 1
 var self = this;
 my_list.map(function (v){ return self.calc(v) + 1});
 
-// handling context *this* -- case 2
+// CASE: handling context *this* -- case 2
 my_list.map(function (v){ return this.calc(v) + 1}, this);
 
-// handling context *this* -- case 3 -- since ECMAScript 5.1 only
+// CASE: handling context *this* -- case 3 -- since ECMAScript 5.1 only
 my_list.map(function (v){ return this.calc(v) + 1}.bind(this));
 ```
 
 
+### Strings
+
+#### Templates
+
+More about templates can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_literals).
+
+Shortly template literals, multiline by default
+
+``` js
+let a = 5;
+
+// CASE: Interpolation
+let t = `My custom template: ${a}` // My custom template: 5
+
+// CASE: Multiline feature
+let t2 = `It is multi-line
+by default: ${a}`
+/*
+It is multi-line
+by default: 5
+*/
+
+// CASE: Expressions
+let t3 = `It supports expressions: ${a + 3}`; // It supports expressions: 8
+
+
+
+```
