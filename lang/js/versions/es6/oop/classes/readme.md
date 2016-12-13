@@ -73,3 +73,38 @@ class MyClass {
     }
 }
 ```
+
+## Getter/Setter
+
+### Get
+
+The `get` syntax binds an object property to a function that will be called when that property is looked up.
+
+More information about `get` can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get)
+
+``` js
+
+class MyClass {
+    _foo: 2,
+    get foo(){ return this._foo; }
+}
+
+myInstance = MyClass()
+
+let myFoo = myInstance.foo; 
+
+myFoo; // 2
+```
+
+### Set
+
+The `set` syntax binds an object property to a function to be called when there is an attempt to set that property.
+
+More information about `set` can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
+
+``` js
+class MyClass {
+    foo: 0,
+    set foo(a){ this.foo = a; }
+}
+```
