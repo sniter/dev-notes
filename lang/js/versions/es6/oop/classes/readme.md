@@ -29,20 +29,6 @@ class MyClass {
 }
 ```
 
-## Methods
-
-``` js
-class MyClass { 
-    // ... some code here
-    updateA (a) {
-        this.a = a;
-        return this;
-    },
-    sum (b) {
-        return this.a + b
-    }
-}
-```
 
 ## Inheritance
 
@@ -59,7 +45,23 @@ class MyChildClass extends MyParentClass {
 }
 ```
 
-## Static methods
+## Methods
+
+``` js
+class MyClass { 
+    // ... some code here
+    updateA (a) {
+        this.a = a;
+        return this;
+    },
+    sum (b) {
+        return this.a + b
+    }
+}
+```
+
+
+### Static methods
 
 The static keyword defines a static method for a class.
 
