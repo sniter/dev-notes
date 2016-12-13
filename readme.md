@@ -5,6 +5,7 @@
 * [Java](./lang/java/readme.md)
 * [Scala](./lang/scala/readme.md)
 * [Python](./lang/python/readme.md)
+* [Javascript](./lang/js/readme.md)
 
 ## Architecture
 
