@@ -19,6 +19,8 @@ class MyClass {
 
 ## Constructor 
 
+More information about `constructor` can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
+
 ``` js
 class MyClass {
   constructor(a) {
@@ -44,6 +46,8 @@ class MyClass {
 
 ## Inheritance
 
+More information about iheritance can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends).
+
 ``` js
 
 class MyParentClass {
@@ -52,5 +56,20 @@ class MyParentClass {
 
 class MyChildClass extends MyParentClass {
     // ... some code here
+}
+```
+
+## Static methods
+
+The static keyword defines a static method for a class.
+
+More information about `static` can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/static).
+
+``` js
+
+class MyClass {
+    static function myStaticMethod(a, b){
+        return a + b;
+    }
 }
 ```
