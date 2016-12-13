@@ -7,16 +7,16 @@
 ## What's new
 
 * Definitions
- * [Variables definition](./define/variables/readme.md)
-  * [Variables](./define/variables/readme.md#define-variables)
-  * [Constants](./define/variables/readme.md#define-constants)
- * [Lambdas](./define/lambda/readme.md) 
- * [Objects](./define/objects/readme.md) 
+  * [Variables definition](./define/variables/readme.md)
+    * [Variables](./define/variables/readme.md#define-variables)
+    * [Constants](./define/variables/readme.md#define-constants)
+  * [Lambdas](./define/lambda/readme.md) 
+  * [Objects](./define/objects/readme.md) 
 * Standard Library 
- * [String](./lang/string/readme.md)
-  * [String Interpolation](./lang/string/readme.md#string-interpolation)
-  * [Symbols](./lang/string/readme.md#symbols)
- * Array
+  * [String](./lang/string/readme.md)
+    * [String Interpolation](./lang/string/readme.md#string-interpolation)
+    * [Symbols](./lang/string/readme.md#symbols)
+  * Array
 * OOP
   * [Modules](./oop/modules/readme.md)
     * [Export](./oop/modules/readme.md#export)

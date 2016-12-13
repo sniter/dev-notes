@@ -47,7 +47,7 @@ ES6:
 const mySymbol = Symbol("MySymbol")
 
 // CASE: Unique Behavior
-Symbol("foo") !== Symbol("foo") // true
+Symbol("MySymbol") !== Symbol("MySymbol") // true
 
 // CASE: Unique Behavior #2
 let f = "foo"
@@ -56,6 +56,20 @@ f1 = Symbol(f)
 f2 = Symbol(f)
 
 f1 !== f2 // true
+
+// CASE: Indexing
+Symbol.for("MySymbol") === Symbol.for("MySymbol")
+
+// CASE: Accessing Symbol label
+const mySymbol = Symbol("MySymbol")
+Symbol.keyFor(foo) === "MySymbol" // true
+
+// CASE: Setting object Symbols
+obj = {}
+const mySymbol = Symbol("MySymbol")
+obj[mySymbol] = "My Value"
+Object.getOwnPropertyNames(obj) // []
+Object.getOwnPropertySymbols(obj) // [ Symbol(MySymbol) ]
 
 // CASE: Cannot create Symbol from Symbol
 f3 = Symbol(f1) // raises TypeError: Cannot convert a Symbol value to a string
