@@ -27,9 +27,9 @@
     * [Inheritance](./oop/classes/readme.md#inheritance)
     * [Methods](./oop/classes/readme.md#methods)
       * [Static methods](./oop/classes/readme.md#static-methods)
-  * [Getter/Setter](./oop/classes/readme.md#gettersetter)
-    * [Get](./oop/classes/readme.md#get)
-    * [Set](./oop/classes/readme.md#set)
+      * [Getter/Setter](./oop/classes/readme.md#gettersetter)
+        * [Get](./oop/classes/readme.md#get)
+        * [Set](./oop/classes/readme.md#set)
 * [Functional Programming](./fp/readme.md)
 
 
