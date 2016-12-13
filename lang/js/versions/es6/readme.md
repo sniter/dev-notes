@@ -116,3 +116,5 @@ function foo(tpl){
 
 foo `Calling function without brackets` // Calling function without brackets_foo
 ```
+
+
