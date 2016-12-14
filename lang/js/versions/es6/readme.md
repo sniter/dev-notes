@@ -33,8 +33,8 @@
 * [Functional Programming](./fp/readme.md)
   * [Extractors](./fp/readme.md#extractors)
   * [Generators](./fp/generators/readme.md)
-    * [Iteration interface](./fp/generators/readme.md#1)
-    * [Iterable Protocol](./fp/generators/readme.md#2)
-    * [Iterator Protocol](./fp/generators/readme.md#3)
+    * [Iteration interface](./fp/generators/readme.md#iteration-interface)
+    * [Iterable Protocol](./fp/generators/readme.md#iterable-protocol)
+    * [Iterator Protocol](./fp/generators/readme.md#iterator-protocol)
 
 
