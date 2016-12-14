@@ -31,5 +31,10 @@
         * [Get](./oop/classes/readme.md#get)
         * [Set](./oop/classes/readme.md#set)
 * [Functional Programming](./fp/readme.md)
+  * [Extractors](./fp/readme.md#extractors)
+  * [Generators](./fp/generators/readme.md)
+    * [Iteration interface](./fp/generators/readme.md#1)
+    * [Iterable Protocol](./fp/generators/readme.md#2)
+    * [Iterator Protocol](./fp/generators/readme.md#3)
 
 
