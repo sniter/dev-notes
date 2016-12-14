@@ -14,6 +14,53 @@ function* myGenerator(any_list){
 }
 ```
 
+Another case of creating **Generator**:
+
+``` js
+let myGenerator = {
+    *[Symbol.iterator]() {
+        // ... some code here
+    }
+} // Object with iterable protocol
+```
+
+Using **Generators** in your code:
+
+``` js
+
+let myGenerator = function*() {
+    // ... some code here 
+}
+
+// CASE: for .. of
+for(v of myGenerator()){
+    console.log(v)
+}
+
+// CASE: building Array
+myListOfValues = [ ...myGenerator() ]
+
+// CASE: extractor
+let [v1, v2, v3, ...otherValues] = myGenerator()
+
+```
+
+Using **Generators** ad Class methods:
+
+``` js 
+class MyClass {
+    * myGenerator(){
+        // ... some code here
+    },
+    * yetAnotherGenerator(a, b){
+        // ... some code here
+    },
+    notGenerator(){ // just simple method
+        // ... some code here
+    }
+}
+```
+
 ## Iteration interface
 
 More inf can be found [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Iteration_protocols)
