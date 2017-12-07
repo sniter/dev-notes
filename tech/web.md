@@ -33,10 +33,15 @@ X-DNS-Prefetch-Control: on
 * Низкий приоритет, работает только при переходах
 
 ``` html
-<link rel="prefetch" href="/my/happy/file.ext" as="video" type="text/js">
+<link rel="prefetch" href="http://mydomain.com/another_page/">
 
-<meta http-equiv="Link" content="</images/big.jpeg>; rel=prefetch">
+<meta http-equiv="Link" content="</another_page/>; rel=prefetch">
 ```
+
+Возможные варианты аттрибута `rel`:
+
+* `prefetch`
+* `next`
 
 Этот вариант загрузки является частью стандарта HTML 4.01.
 
