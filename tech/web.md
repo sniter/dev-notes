@@ -22,7 +22,9 @@ X-DNS-Prefetch-Control: on
 
 ### Префетч ресурсов
 
-#### Preload: Высокий приоритет, только Chrome и Mozilla
+#### Preload
+
+Высокий приоритет, только [Chrome и Mozilla](https://caniuse.com/#search=preload)
 
 ``` html
 <link rel="preload" href="/my/happy/file.ext" as="video" type="text/js" crossorigin="anonymous">
