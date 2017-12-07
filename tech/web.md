@@ -22,7 +22,7 @@ X-DNS-Prefetch-Control: on
 
 ### Префетч ресурсов
 
-#### Высокий приоритет, только Chrome и Mozilla
+#### Preload: Высокий приоритет, только Chrome и Mozilla
 
 ``` html
 <link rel="preload" href="/my/happy/file.ext" as="video" type="text/js" crossorigin="anonymous">
@@ -41,7 +41,7 @@ X-DNS-Prefetch-Control: on
 
 Атрибут `crossorigin` позволяет решать проблемы CORS.
 
-#### Низкий приоритет, работает только при переходах
+#### Prefetch: Низкий приоритет, работает только при переходах
 
 ``` html
 <link rel="prefetch" href="http://mydomain.com/another_page/">
@@ -59,11 +59,13 @@ X-DNS-Prefetch-Control: on
 *Важно!*
 Этот тип префетча работает только с ``<link>`` тегом
 
-#### Низкий приоритет, только Chrome
+#### Subresource: Низкий приоритет, только Chrome
 
 ``` html
 <link rel="subresource">
 ```
+
+#### Preeconnect: DNS, TCP, TLS, Вебсокет
 
 ## Источники
 
@@ -71,3 +73,4 @@ X-DNS-Prefetch-Control: on
 
 * [MDN: preloading content with rel="preload"] (https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)
 * [MDN: Link prefetching FAQ] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ)
+* [Ускоряем загрузку ресурсов для сайта] (https://ymatuhin.ru/front-end/html5-link-prefetch/)
