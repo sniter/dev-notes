@@ -71,6 +71,6 @@ X-DNS-Prefetch-Control: on
 
 ### Префетч
 
-* [MDN: preloading content with rel="preload"] (https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)
-* [MDN: Link prefetching FAQ] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ)
-* [Ускоряем загрузку ресурсов для сайта] (https://ymatuhin.ru/front-end/html5-link-prefetch/)
+* [MDN: preloading content with rel="preload"](https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)
+* [MDN: Link prefetching FAQ](https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ)
+* [Ускоряем загрузку ресурсов для сайта](https://ymatuhin.ru/front-end/html5-link-prefetch/)
