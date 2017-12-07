@@ -41,7 +41,9 @@ X-DNS-Prefetch-Control: on
 
 Атрибут `crossorigin` позволяет решать проблемы CORS.
 
-#### Prefetch: Низкий приоритет, работает только при переходах
+#### Prefetch
+
+Низкий приоритет, работает только при переходах. [Хорошая поддержка браузеров.](https://caniuse.com/#search=Prefetch)
 
 ``` html
 <link rel="prefetch" href="http://mydomain.com/another_page/">
