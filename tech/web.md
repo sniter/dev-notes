@@ -63,13 +63,31 @@ X-DNS-Prefetch-Control: on
 *Важно!*
 Этот тип префетча работает только с ``<link>`` тегом
 
-#### Subresource: Низкий приоритет, только Chrome
+#### Subresource
+
+Низкий приоритет, только [Chrome](https://caniuse.com/#search=Subresource)
 
 ``` html
-<link rel="subresource">
+<link rel="subresource" href="http://mydomain.com/my_page/">
 ```
 
-#### Preeconnect: DNS, TCP, TLS, Вебсокет
+#### Preconnect
+
+Поддержка DNS, TCP, TLS, Вебсокет.
+Браузеры: [только современные](https://caniuse.com/#search=preconnect)
+
+``` html
+<link rel="preconnect" href="http://mydomain.com/ws/">
+```
+
+#### Prerender
+
+Технология Microdoft для предгрузки страниц для навигации
+Браузеры: [IE11, Android](https://caniuse.com/#search=prerender)
+
+``` html
+<link rel="prerender" href="http://mydomain.com/my_page/">
+```
 
 ## Источники
 
