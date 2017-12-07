@@ -2,8 +2,6 @@
 
 ## Оптимизация загрузки данных 
 
-
-
 ### Префетч DNS может выполняться несколькими способами
 
 * Выставление в заголовке ответа
@@ -24,13 +22,26 @@ X-DNS-Prefetch-Control: on
 
 ### Префетч ресурсов
 
-* Высокий приоритет, только Chrome
+#### Высокий приоритет, только Chrome и Mozilla
 
 ``` html
 <link rel="preload" href="/my/happy/file.ext" as="video" type="text/js" crossorigin="anonymous">
 ```
+Возможные варианты аттрибута `as`:
 
-* Низкий приоритет, работает только при переходах
+* `document` - html документ
+* `fetch` - обычный GET запрос
+* `font` - шрифт
+* `image` - картинка
+* `script` - JS скрипт
+* `style` - CSS
+* `worker` - JS worker / шаред воркер
+
+Атрибут `type` отвечает за mime-type
+
+Атрибут `crossorigin` позволяет решать проблемы CORS.
+
+#### Низкий приоритет, работает только при переходах
 
 ``` html
 <link rel="prefetch" href="http://mydomain.com/another_page/">
@@ -48,7 +59,15 @@ X-DNS-Prefetch-Control: on
 *Важно!*
 Этот тип префетча работает только с ``<link>`` тегом
 
-* Низкий приоритет, только Chrome
+#### Низкий приоритет, только Chrome
+
 ``` html
 <link rel="subresource">
 ```
+
+## Источники
+
+### Префетч
+
+* [MDN: preloading content with rel="preload"] (https://developer.mozilla.org/en-US/docs/Web/HTML/Preloading_content)
+* [MDN: Link prefetching FAQ] (https://developer.mozilla.org/en-US/docs/Web/HTTP/Link_prefetching_FAQ)
