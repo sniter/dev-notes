@@ -54,7 +54,7 @@ trait Monoid[A] extends Semigroup[A]{
 
 #### Monoid laws
 
-** Associativity **
+##### Associativity
 
 ```scala
 val x: A = ???
@@ -64,7 +64,7 @@ val m: Monoid[A] = ???
 m.combine(x, y) == m.combine(y, x)s
 ```
 
-** Identity **
+##### Identity
 
 If combine any value of type `A` with `Monoid[A].empty` the result will be equal inital value 
 
@@ -90,7 +90,7 @@ trait Functor[F[_]]{
 
 #### Functor laws
 
-** Identity **
+##### Identity
 
 ```scala
 val fa: Functor[F[A]] = ???
@@ -98,7 +98,7 @@ val fa: Functor[F[A]] = ???
 fa.map(a => a) == fa // true
 ```
 
-** Composition **
+##### Composition
 
 ```scala
 val fa: Functor[F[A]] = ???
@@ -126,7 +126,7 @@ trait Monad[F[_]] extends Applicative{
 
 #### Monad Laws
 
-** Left identity **
+##### Left identity
 
 ```scala
 val a: F[A]
@@ -136,13 +136,13 @@ val func: A => F[B]
 m.pure(a).flatMap(func) == func(a) // true
 ```
 
-** Right identity **
+##### Right identity
 
 ```scala
 m.flatMap(m.pure) == m // true
 ```
 
-** Associativity **
+##### Associativity
 
 ```scala
 val m: Monad[F[A]] = ???
