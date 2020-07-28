@@ -124,6 +124,36 @@ trait Monad[F[_]] extends Applicative{
 }
 ```
 
+#### Monad Laws
+
+** Left identity **
+
+```scala
+val a: F[A]
+val m: Monad[F[A]]
+val func: A => F[B]
+
+m.pure(a).flatMap(func) == func(a) // true
+```
+
+** Right identity **
+
+```scala
+m.flatMap(m.pure) == m // true
+```
+
+** Associativity **
+
+```scala
+val m: Monad[F[A]] = ???
+val f: A => F[B] = ???
+val g: B => F[C] = ???
+
+m.flatMap(f).flatMap(g) == m.flatMap(x => f(x).flatMap(g))
+```
+
+TODO: Complete it
+
 ## Patterns
 
 * Actors / FSM
