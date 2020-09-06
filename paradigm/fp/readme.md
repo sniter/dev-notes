@@ -154,6 +154,12 @@ m.flatMap(f).flatMap(g) == m.flatMap(x => f(x).flatMap(g))
 
 TODO: Complete it
 
+# Resources
+
+* [Functional Programming for Mortals](https://leanpub.com/fpmortals/read)
+* [Scala with Cats](https://www.scalawithcats.com/)
+* [Cats reources](https://typelevel.org/cats/resources_for_learners.html)
+
 ## Patterns
 
 * Actors / FSM
